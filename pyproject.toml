@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools >= 65.6.3", "ipython"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mpasp"
+dynamic = ["version"]
+authors = [
+  { name = "Renato Lui Geh", email = "renatogeh@gmail.com" },
+]
+dependencies = ["pasp-plp", "ipython", "notebook", "pygments-pasp", "wurlitzer", "jupyterlab", "jupyter_server_ydoc"]
+description = "Magic for dPASP in IPython"
+license = { text = "MIT" }
+readme = "README.md"
+
+[project.urls]
+Repository = "https://github.com/kamel-usp/mpasp"
+Issues = "https://github.com/kamel-usp/mpasp/issues"
+
+[tool.setuptools.dynamic]
+version = {attr = "mpasp.__version__"}
